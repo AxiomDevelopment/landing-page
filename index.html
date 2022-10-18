@@ -3,228 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Axiom Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- embed stuff -->
     <meta name="description" content="Home to everything Axiom">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="BadWolf22">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="theme-color" content="#00bbff" />
-    <meta content="https://javarock.org/logo.webp" property="og:image" />
+    <meta name="author" content="BadWolf22, ArmoredFuzzball">
+    <meta name="theme-color" content="#00bbff">
+    <meta content="https://axiomdev.net/logo.webp" property="og:image">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1161">
     <meta property="og:image:height" content="1280">
-
-    <title>Axiom Homepage</title>
-
-    <style>
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #6E6E6E;
-            border-radius: 0px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: whitesmoke;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-            border-radius: 0px;
-            box-shadow: inset 0px 0px 0px 0px #FFFFFF;
-        }
-
-        html {
-            height: 100%;
-            user-select: none;
-            background-color: rgb(18, 18, 18);
-            margin-bottom: 0em;
-        }
-
-        #header {
-            background-color: rgb(55, 56, 49);
-            text-align: center;
-            margin-bottom: 1em;
-            padding: 1em 0em 1em 0em;
-        }
-
-        #container {
-            min-height: 81vh;
-        }
-
-        #footer {
-            background-color: rgb(55, 56, 49);
-            text-align: center;
-            margin-top: 1vh;
-            padding: 1em 0em 1em 0em;
-        }
-
-        .bordered {
-            border: 1px solid yellow;
-        }
-
-        .row {
-            margin-left: 10%;
-            margin-right: 10%;
-            width: 80%;
-        }
-
-        .col {
-            min-width: 20em;
-            display: inline-block;
-            height: 200px;
-            margin: 5px;
-            width: calc(33% - 10px);
-            border: 1px solid black;
-            border-radius: 50px;
-            overflow: hidden;
-        }
-
-        .background-blur {
-            top: 0%;
-            left: 0%;
-            height: 100%;
-            width: 100%;
-            filter: blur(2px) brightness(50%);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .background-blur:hover {
-            filter: blur(0px);
-        }
-
-        .card-text {
-            color: white;
-            font-size: 2em;
-            pointer-events: none;
-            position: relative;
-            background-color: rgba(50, 50, 50, 33%);
-            width: fit-content;
-            padding: 10px;
-            margin: 0;
-            top: -50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-
-        @media screen and (max-width: 110em) {
-            .col {
-                /* min-width: 20em; */
-                display: inline-block;
-                /* height: 100%; */
-                margin: 0px 5px 0px 5px;
-                width: calc(50% - 20px);
-            }
-        }
-
-
-        @media screen and (max-width: 54em) {
-            .col {
-                min-width: 20em;
-                display: inline-block;
-                /* height: 100%; */
-                margin: 0px 5px 0px 5px;
-                width: calc(100% - 10px);
-            }
-        }
-    </style>
 </head>
 
-<body onfocus="(function(){location.reload();})()">
-    <header id="header">
-        <img style="max-width: 90%;" draggable="false" src="./Axiom.png">
-    </header>
-
-    <div id="container">
-        <div class="row">
-
-            <span class="col">
-                <a href="/minecraft">
-                    <div class="background-blur"
-                        style="background-image:url('https://wallpapercave.com/wp/wp2586787.jpg');"></div>
-                </a>
-                <h1 class="card-text">Minecraft</h1>
-            </span>
-
-            <span class="col">
-                <a href="/boids">
-                    <div class="background-blur" style="background-image:url('./boids.png');"></div>
-                </a>
-                <h1 class="card-text">Boids</h1>
-            </span>
-
-            <span class="col">
-                <a href="/projects">
-                    <div class="background-blur" style="background-image:url('./project.png');"></div>
-                </a>
-                <h1 class="card-text">Open Projects</h1>
-            </span>
-
-            <span class="col">
-                <a href="/dnd/DnD-Sheets//DnD-Front-End">
-                    <div class="background-blur"
-                        style="background-image:url('https://images.unsplash.com/photo-1578377375762-cbcc98d68af0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');">
-                    </div>
-                </a>
-                <h1 class="card-text">D&D</h1>
-            </span>
-
-            <span class="col">
-                <a href="/worldnexus/">
-                    <div class="background-blur"
-                        style="background-image:url('https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');">
-                    </div>
-                </a>
-                <h1 class="card-text">Nexus of Worlds</h1>
-            </span>
-
-            <span class="col">
-                <a href="/fileserver">
-                    <div class="background-blur"
-                        style="background-image:url('https://images.unsplash.com/photo-1569235186275-626cb53b83ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80');">
-                    </div>
-                </a>
-                <h1 class="card-text">File Server & CDN</h1>
-            </span>
-
-            <span class="col">
-                <a href="/qr">
-                    <div class="background-blur"
-                        style="background-image:url('https://images.unsplash.com/photo-1626682561113-d1db402cc866?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80');">
-                    </div>
-                </a>
-                <h1 class="card-text">QR</h1>
-            </span>
-
-            <span class="col">
-                <a href="/whatthematthewdoin/">
-                    <div class="background-blur"
-                        style="background-image:url('https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80');">
-                    </div>
-                </a>
-                <h1 class="card-text">Schedule</h1>
-            </span>
-
-            <span class="col">
-                <a href="/socket/">
-                    <div class="background-blur"
-                        style="background-image:url('./img.jpg');">
-                    </div>
-                </a>
-                <h1 class="card-text">Socket Test</h1>
-            </span>
-
-        </div>
-    </div>
-
-    <footer id="footer">
-        © Axiom Developers Incorporated
-    </footer>
+<body>
+    Hello, World!
 </body>
 
 </html>
