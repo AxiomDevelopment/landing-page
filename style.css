@@ -1,0 +1,87 @@
+html,
+body {
+    background-color: #1c1c1c;
+    color: whitesmoke;
+    /* monaco font */
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+    height: 500vh;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    width: 600px;
+}
+
+.navs {
+    border: 3px solid #bb8c54;
+    border-radius: 5px;
+    color: #bb8c54;
+    cursor: pointer;
+    margin: 3px;
+    text-align: center;
+    flex: 1;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.navs:hover {
+    background-color: #bb8c54;
+    color: #1c1c1c;
+}
+
+#welcome {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    font-size: 8vw;
+    width: calc(100% - 10vw);
+    padding-left: 10vw;
+}
+
+#welcome > b:not(.inactive)::after {
+    content: "";
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-duration: 1s;
+    display: inline-block;
+    width: 8px;
+    height: 7.9vw;
+    border-radius: 3px;
+    background: white;
+    vertical-align: middle;
+    margin: 0;
+}
+
+/* #welcome > b:has(.active) {
+
+} */
+
+@keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0.0;
+    }
+}

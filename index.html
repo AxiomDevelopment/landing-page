@@ -9,6 +9,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
+    <script defer type="text/JavaScript" src="./index.js"></script>
+
     <!-- embed stuff -->
     <meta name="description" content="Home to everything Axiom">
     <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -21,7 +23,23 @@
 </head>
 
 <body>
-    Hello, World!
+    <div id="navbar">
+        <a class="navs" href="#land">Top();</a>
+        <a class="navs" href="#about">About();</a>
+        <a class="navs" href="#people">Whois();</a>
+        <a class="navs" href="#projects">Projects();</a>
+        <a class="navs" href="#contact">Contact();</a>
+    </div>
+    <div class="page" id="land">
+        <div id="welcome">
+            <b style="color: #689551" id="header1" ></b>
+            <b style="color: #72b4d9" id="header2" class="inactive"></b>
+        </div>
+    </div>
+    <div class="page" id="about">page2</div>
+    <div class="page" id="people">page3</div>
+    <div class="page" id="projects">page4</div>
+    <div class="page" id="contact">page5</div>
 </body>
 
 </html>
