@@ -1,79 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 html,
 body {
+    min-height: 500vh;
     background-color: #1c1c1c;
     color: whitesmoke;
     font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
-    height: 500vh;
     scroll-behavior: smooth;
-    margin: 0;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* page */
 .page {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* header */
 .header {
+    font-size: 80px;
+    flex: 0.5;
+    padding: 50px;
     padding-top: 70px;
-    margin-left: 1.5vw;
-    font-size: 60px;
-    flex: 1;
 }
 
 .content {
-    flex: auto;
-    background-color: green;
+    flex: 9.5;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* navbutton container */
 #navbar {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
     display: flex;
     flex-flow: row wrap;
-    width: 700px;
+    width: 640px;
+    z-index: 1;
 }
 
-/* navbuttons */
 .navs {
     border: 3px solid #bb8c54;
     border-radius: 5px;
     color: #bb8c54;
+    background-color: #1c1c1c;
     cursor: pointer;
     margin: 3px;
     text-align: center;
     flex: 1;
-    padding: 20px;
-    text-decoration: none;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-weight: 800;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
+
 .navs:hover {
     background-color: #bb8c54;
     color: #1c1c1c;
 }
 
 /* welcome text on landing page */
-#land > div {
-    display: flex;
+#land>div {
+    align-items: baseline;
     flex-flow: column nowrap;
-    justify-content: center;
-    height: 90%;
     font-size: 8vw;
-    width: calc(100% - 10vw);
-    padding-left: 10vw;
+    text-indent: 50px;
 }
 
 /* blinking text cursor */
-#welcome > b:not(.inactive)::after {
+#land>div>b:not(.inactive)::after {
     content: "";
     animation-name: blinker;
     animation-iteration-count: infinite;
@@ -87,6 +93,7 @@ body {
     vertical-align: middle;
     margin: 0;
 }
+
 @keyframes blinker {
     from {
         opacity: 1.0;
@@ -97,17 +104,38 @@ body {
     }
 }
 
-/* about us text */
-#about > div {
-    width: 50%;
-    font-size: 30px;
-    padding-left: 1.5vw;
-    text-indent: 3vw;
-    line-height: 1.5;
+/* make headers centered on big screen */
+@media screen and (min-width: 1400px) {
+    .header {
+        text-align: center;
+    }
 }
 
-/* people text */
-#people > div {
+#about>div{
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 2vw;
+}
+
+#aboutinfo {
+    max-width: 45%;
+}
+
+#aboutinfo>p {
+    margin-bottom: 20px;
+    text-indent: 3vw;
+    text-align: left;
+}
+
+#about>div>img {
+    height: 35vw;
+    aspect-ratio: 1;
+    border: 3px solid #bb8c54;
+}
+
+#people>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -117,10 +145,21 @@ body {
 }
 
 .persons {
-    max-width: 30%;
+    width: 40%;
+    min-height: 600px;
+    line-height: 1.5;
+    border: 3px solid #bb8c54;
+    padding: 20px;
+    position: relative;
 }
 
-#people > div > div > a {
+/* get last child of type p from .persons */
+.persons>p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.persons>a {
+    position: absolute;
     background-color: #bb8c54;
     border: none;
     border-radius: 5px;
@@ -130,24 +169,39 @@ body {
     font-weight: 800;
     padding: 10px;
     text-decoration: none;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-#projectwords {
-    width: 50%;
-    font-size: 2vw;
-    padding-left: 1.5vw;
-    text-indent: 3vw;
-}
-
-#projects > div {
-    display: flex;
+#projects>div {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    font-size: 2vw;
 }
 
-#projects > div > div > a {
+#projects>div>img {
+    height: 35vw;
+    aspect-ratio: 16/9;
+
+    border: 3px solid #bb8c54;
+}
+
+#projectinfo {
+    position: relative;
+    max-width: 30%;
+}
+
+#projectinfo>p {
+    margin-bottom: 20px;
+    text-indent: 40px;
+    text-align: left;
+}
+
+#projectinfo>a {
+    position: absolute;
     background-color: #bb8c54;
     border: none;
     border-radius: 5px;
@@ -155,14 +209,16 @@ body {
     cursor: pointer;
     font-size: 1.5vw;
     font-weight: 800;
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-#contact > form {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vw;
+#contact > div > div {
+    border: 3px solid #bb8c54;
+    font-size: 1.75vw;
+    width: 33%;
+    padding: 50px;
+    text-align: center;
 }

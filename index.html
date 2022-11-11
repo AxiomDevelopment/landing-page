@@ -7,9 +7,9 @@
 
     <title>Axiom Homepage</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 
-    <script defer type="text/JavaScript" src="./index.js"></script>
+    <script defer type="text/JavaScript" src="index.js"></script>
 
     <!-- embed stuff -->
     <meta name="description" content="Home to everything Axiom">
@@ -42,11 +42,15 @@
     <div class="page" id="about">
         <h1 class="header">About us</h1>
         <div class="content">
-            <p> Axiom is a group of budding developers and longtime friends who strive to create useful, intuitive,
-                powerful, performant, and maintainable programs for humanity. We have been working together for several
-                years at this point and have decided to create a public-facing group to showcase our work. Axiom was
-                originally just the name of the server that hosted our projects, so we thought it fitting to name our
-                group after it. The Axiom server continues to run today and powers many of our projects.</p>
+            <div id="aboutinfo">
+                <p> Axiom is a group of budding developers and longtime friends who strive to create useful, intuitive,
+                    powerful, performant, and maintainable programs for humanity. We have been working together for
+                    several
+                    years at this point and have decided to create a public-facing group to showcase our work. Axiom was
+                    originally just the name of the server that hosted our projects, so we thought it fitting to name
+                    our
+                    group after it. The Axiom server continues to run today and powers many of our projects.</p>
+            </div>
             <img src="./images/code.jpg">
         </div>
     </div>
@@ -57,18 +61,20 @@
             <div class="persons">
                 <h2><b>ArmoredFuzzball</b>🦊</h2>
                 <h3>Sloan Stubler</h3>
+                <h4 style="color: #7289da;">Discord: FullMetalFuzzball#1337</h4>
                 <hr>
                 <p>Majoring in Computer Science</p>
                 <p>University of Kansas</p>
                 <p>Full-stack Developer</p>
                 <p>JavaScript, HTML/CSS</p><br>
-                <p>I do my best to make my software fast and efficient. I am always learning new methods and
+                <p>I do my best to make my code fast and reusable. I am always learning new methods and
                     implementing them in my work.</p><br>
                 <a href="../ArmoredFuzzball">More information</a>
             </div>
             <div class="persons">
                 <h2><b>BadWolf22</b>🐺</h2>
                 <h3>Matthew Postel</h3>
+                <h4 style="color: #7289da;">Discord: BadWolf22#2001</h4>
                 <hr>
                 <p>Woof UwU</p><br>
                 <a href="../BadWolf22">More information</a>
@@ -81,26 +87,27 @@
         <div class="content">
             <div id="projectinfo">
                 <p>Check out our projects page to see our completed and ongoing projects.
-                    Feel free to leave a comment or suggestion on their respective Githubs!</p>
+                    Feel free to leave a comment or suggestion on their respective Github repos!</p>
                 <a href="../projects">View our project page</a>
             </div>
-            <img src="https://axiomdev.net/Axiom.png">
+            <img src="./images/projects.png">
         </div>
     </div>
     <!-- contact screen -->
     <div class="page" id="contact">
         <h1 class="header">Contact us</h1>
         <div class="content">
-            <form>
-                Not yet working<br>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name.."><br>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email.."><br>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
-                <input type="submit" value="Submit">
-            </form>
+            <div>
+                Feel free to contact us at:<br>
+                <a href="mailto:linuxaxiomserver@gmail.com"
+                    style="text-decoration: underline; color: #72b4d9">linuxaxiomserver@gmail.com</a><br><br>
+                Or you can find us on Github:<br>
+                <a href="https://github.com/AxiomDevelopment"
+                    style="text-decoration: underline; color: #72b4d9">github.com/AxiomDevelopment</a><br><br>
+                Or find us with our Discords!<br>
+                (found in Whois(); section)<br>
+
+            </div>
         </div>
     </div>
 </body>
