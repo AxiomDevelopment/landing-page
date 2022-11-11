@@ -7,7 +7,7 @@
 
     <title>Axiom Homepage</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 
     <script defer type="text/JavaScript" src="./index.js"></script>
 
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <!-- top buttons -->
     <div id="navbar">
         <a class="navs" href="#land">Top();</a>
         <a class="navs" href="#about">About();</a>
@@ -30,16 +31,78 @@
         <a class="navs" href="#projects">Projects();</a>
         <a class="navs" href="#contact">Contact();</a>
     </div>
+    <!-- landing screen -->
     <div class="page" id="land">
-        <div id="welcome">
-            <b style="color: #689551" id="header1" ></b>
+        <div class="content">
+            <b style="color: #689551" id="header1"></b>
             <b style="color: #72b4d9" id="header2" class="inactive"></b>
         </div>
     </div>
-    <div class="page" id="about">page2</div>
-    <div class="page" id="people">page3</div>
-    <div class="page" id="projects">page4</div>
-    <div class="page" id="contact">page5</div>
+    <!-- about us screen -->
+    <div class="page" id="about">
+        <h1 class="header">About us</h1>
+        <div class="content">
+            <p> Axiom is a group of budding developers and longtime friends who strive to create useful, intuitive,
+                powerful, performant, and maintainable programs for humanity. We have been working together for several
+                years at this point and have decided to create a public-facing group to showcase our work. Axiom was
+                originally just the name of the server that hosted our projects, so we thought it fitting to name our
+                group after it. The Axiom server continues to run today and powers many of our projects.</p>
+            <img src="./images/code.jpg">
+        </div>
+    </div>
+    <!-- people screen -->
+    <div class="page" id="people">
+        <h1 class="header">Who we are</h1>
+        <div class="content">
+            <div class="persons">
+                <h2><b>ArmoredFuzzball</b>🦊</h2>
+                <h3>Sloan Stubler</h3>
+                <hr>
+                <p>Majoring in Computer Science</p>
+                <p>University of Kansas</p>
+                <p>Full-stack Developer</p>
+                <p>JavaScript, HTML/CSS</p><br>
+                <p>I do my best to make my software fast and efficient. I am always learning new methods and
+                    implementing them in my work.</p><br>
+                <a href="../ArmoredFuzzball">More information</a>
+            </div>
+            <div class="persons">
+                <h2><b>BadWolf22</b>🐺</h2>
+                <h3>Matthew Postel</h3>
+                <hr>
+                <p>Woof UwU</p><br>
+                <a href="../BadWolf22">More information</a>
+            </div>
+        </div>
+    </div>
+    <!-- projects screen -->
+    <div class="page" id="projects">
+        <h1 class="header">What we've built</h1>
+        <div class="content">
+            <div id="projectinfo">
+                <p>Check out our projects page to see our completed and ongoing projects.
+                    Feel free to leave a comment or suggestion on their respective Githubs!</p>
+                <a href="../projects">View our project page</a>
+            </div>
+            <img src="https://axiomdev.net/Axiom.png">
+        </div>
+    </div>
+    <!-- contact screen -->
+    <div class="page" id="contact">
+        <h1 class="header">Contact us</h1>
+        <div class="content">
+            <form>
+                Not yet working<br>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.."><br>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email.."><br>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
